@@ -253,6 +253,7 @@ As an example we use the Symfony `DateTimeNormalizer` service so we do have supp
           - ['@dunglas_doctrine_json_odm.normalizer.array', '@serializer.normalizer.datetime', '@dunglas_doctrine_json_odm.normalizer.object']
           - ['@serializer.encoder.json']
         public: true
+        autoconfigure: false
 ```
 
 As a side note: If you happen to use [Autowiring](https://symfony.com/doc/current/service_container/autowiring.html) in your `services.yaml` you might need to set `autowire: false` too.
